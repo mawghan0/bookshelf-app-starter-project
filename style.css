@@ -1,0 +1,351 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  text-align: center;
+  background-color: aqua;
+  font-size: 32px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+main #tambah h2 {
+  text-align: center;
+  font-size: 24px;
+}
+
+main #tambah {
+  background-color: rgb(193, 253, 253);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+main #tambah form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+main #tambah form #bookFormTitle {
+  margin-left: 20px;
+}
+main #tambah form #bookFormAuthor {
+  margin-left: 5px;
+}
+main #tambah form #bookFormYear {
+  margin-left: 15px;
+}
+main #tambah form #bookFormIsComplete {
+  width: 20px;
+  height: 20px;
+}
+main #tambah form #bookFormSubmit {
+  padding: 10px 15px;
+  background-color: aqua;
+}
+
+main #tambah form #bookFormSubmit:hover {
+  padding: 10px 15px;
+  background-color: rgb(0, 194, 194);
+}
+
+/* section tambah end */
+
+#cari h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#cari {
+  margin-bottom: 50px;
+}
+
+/* section cari end */
+
+#belum {
+  align-self: self-start;
+
+  background-color: rgb(193, 253, 253);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#belum h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding: 20px 0 0;
+}
+
+#belum #incompleteBookList {
+  align-self: center;
+  width: 85%;
+}
+
+#belum #incompleteBookList > * {
+  background-color: aqua;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#belum #incompleteBookList > * h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#belum #incompleteBookList > * button {
+  background-color: rgb(139, 252, 252);
+  margin: 5px 2px 0px;
+}
+
+/* section belum end */
+
+#sudah {
+  align-self: self-start;
+
+  background-color: rgb(193, 253, 253);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#sudah h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding: 20px 0 0;
+}
+
+#sudah #completeBookList {
+  align-self: center;
+  width: 85%;
+}
+
+#sudah #completeBookList > * {
+  background-color: aqua;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#sudah #completeBookList > * h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#sudah #completeBookList > * button {
+  background-color: rgb(139, 252, 252);
+  margin: 5px 2px 0px;
+}
+
+/* section sudah end */
+
+#editBookModal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.596);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#editBookModal h2 {
+  text-align: center;
+  /* margin: 50px 0 0; */
+  padding: 10px;
+  font-size: 30px;
+  height: 50px;
+  background-color: aqua;
+}
+
+#editBookModal #editBookForm {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 20px;
+  align-items: center;
+}
+
+#editBookModal #editBookForm #editBookTitle {
+  margin-left: 15px;
+}
+#editBookModal #editBookForm #editBookYear {
+  margin-left: 10px;
+}
+
+#editBookModal #editBookForm #cancelEditButton,
+#editBookModal #editBookForm #submitEditButton {
+  padding: 5px;
+  background-color: rgb(139, 252, 252);
+  width: 200px;
+}
+
+#editBookModal #editBookForm #cancelEditButton:hover,
+#editBookModal #editBookForm #submitEditButton:hover {
+  background-color: rgb(0, 194, 194);
+}
+
+#editBookModal #editBookForm #cancelEditButton {
+  margin-bottom: 20px;
+}
+
+#editBookModal #editBookForm #complete {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+}
+#editBookModal #editBookForm #editBookIsComplete {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
